@@ -37,7 +37,7 @@ src/main/java
 └── com.security.demo  
 &nbsp;&nbsp;&nbsp;&nbsp;├── config  
 &nbsp;&nbsp;&nbsp;&nbsp;├── controller  
-&nbsp;&nbsp;&nbsp;&nbsp;├── model 
+&nbsp;&nbsp;&nbsp;&nbsp;├── model  
 &nbsp;&nbsp;&nbsp;&nbsp;├── repo  
 &nbsp;&nbsp;&nbsp;&nbsp;├── service  
 &nbsp;&nbsp;&nbsp;&nbsp;└── DemoApplication.java  
