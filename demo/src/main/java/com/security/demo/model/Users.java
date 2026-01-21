@@ -14,7 +14,7 @@ import lombok.ToString;
 @ToString
 public class Users {
   @Id
-  private int id;
+  private Integer id;
   private String username;
   private String password;
 }
