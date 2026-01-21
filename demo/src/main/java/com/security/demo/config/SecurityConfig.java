@@ -13,6 +13,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
 import com.security.demo.service.CustomUserDetailService;
 
 @Configuration
@@ -21,6 +23,9 @@ public class SecurityConfig {
   
   @Autowired
   private CustomUserDetailService userDetailService;
+
+  @Autowired
+  private JwtFilter jwtFilter;
 
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity http) {
@@ -42,6 +47,8 @@ public class SecurityConfig {
         // it will generate new session id for each request.
         .sessionManagement(session 
           -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+        //
+        .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
         .build();
   }
 
