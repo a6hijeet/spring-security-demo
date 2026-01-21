@@ -1,6 +1,6 @@
 # Spring Security Demo
 
-A Spring Boot REST API project demonstrating authentication and authorization using Spring Security, JWT, Spring Data JPA, and PostgreSQL.  
+A Spring Boot REST API project demonstrating **authentication** and **authorization** using **Spring Security**, **JWT**, **Spring Data JPA**, and **MySQL**.  
 This repository is intended as a learning and reference project for understanding how security is implemented in modern Spring Boot applications.
 
 ---
@@ -12,7 +12,7 @@ This repository is intended as a learning and reference project for understandin
 - Stateless authentication using JWT (JSON Web Tokens)
 - Role-based authorization
 - Database integration using Spring Data JPA
-- PostgreSQL as the relational database
+- MySQL as the relational database
 - Maven-based dependency management
 - Clean and beginner-friendly project structure
 
@@ -25,7 +25,7 @@ This repository is intended as a learning and reference project for understandin
 - Spring Security
 - Spring Data JPA
 - JWT (JSON Web Token)
-- PostgreSQL
+- MySQL
 - Maven
 - Lombok
 
@@ -34,13 +34,13 @@ This repository is intended as a learning and reference project for understandin
 ## Project Structure
 
 src/main/java  
-└── com.example  
+└── com.security.demo  
+&nbsp;&nbsp;&nbsp;&nbsp;├── config  
 &nbsp;&nbsp;&nbsp;&nbsp;├── controller  
-&nbsp;&nbsp;&nbsp;&nbsp;├── entity  
-&nbsp;&nbsp;&nbsp;&nbsp;├── repository  
-&nbsp;&nbsp;&nbsp;&nbsp;├── security  
+&nbsp;&nbsp;&nbsp;&nbsp;├── model 
+&nbsp;&nbsp;&nbsp;&nbsp;├── repo  
 &nbsp;&nbsp;&nbsp;&nbsp;├── service  
-&nbsp;&nbsp;&nbsp;&nbsp;└── SpringSecurityDemoApplication.java  
+&nbsp;&nbsp;&nbsp;&nbsp;└── DemoApplication.java  
 
 ---
 
@@ -56,11 +56,11 @@ src/main/java
 
 ## Database Configuration
 
-PostgreSQL is used as the database and configured using Spring Data JPA.
+MySQL is used as the database and configured using Spring Data JPA.
 
 Example application.properties configuration:
 
-spring.datasource.url=jdbc:postgresql://localhost:5432/your_db  
+spring.datasource.url=jdbc:MySQL://localhost:5432/your_db  
 spring.datasource.username=your_username  
 spring.datasource.password=your_password  
 
@@ -75,7 +75,7 @@ spring.jpa.show-sql=true
 
 - Java 21 or higher
 - Maven
-- PostgreSQL running locally
+- MySQL running locally
 
 ### Steps
 
@@ -125,7 +125,7 @@ Authorization: Bearer YOUR_JWT_TOKEN
 - Understand Spring Security fundamentals
 - Learn JWT-based authentication
 - Secure REST APIs
-- Work with Spring Data JPA and PostgreSQL
+- Work with Spring Data JPA and MySQL
 - Build real-world backend security patterns
 
 ---
@@ -135,10 +135,3 @@ Authorization: Bearer YOUR_JWT_TOKEN
 - This is a demo and learning project
 - Not intended for production use
 - Focuses on clarity and fundamentals
-
----
-
-## Author
-
-Abhijeet Satpute  
-Backend Developer | Java | Spring Boot
